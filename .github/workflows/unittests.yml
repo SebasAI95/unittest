@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
+
+name: unittest
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        
+         - name: Set up Python version
+          uses: actions/setup-python@v2.2.2
+          with:
+            python-version: 3.9.9
+            cache: 'pip'
+
+        - name: Test with unittest
+          run: |
+            pytest /home/runner/work/unittest/tests
