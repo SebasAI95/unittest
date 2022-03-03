@@ -1,9 +1,9 @@
-import unittest
+import unittest2
 
 import calc
 
 
-class TestCalc(unittest.TestCase):
+class TestCalc(unittest2.TestCase):
 
     def test_add(self):
         self.assertEqual(calc.add(10, 5), 15)

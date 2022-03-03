@@ -1,8 +1,8 @@
-import unittest
+import unittest2
 from employee import Employee
 
 
-class TestEmployee(unittest.TestCase):
+class TestEmployee(unittest2.TestCase):
 
     def test_email(self):
         per_1 = Employee('sebas', 'quintero', 5000)
@@ -33,5 +33,5 @@ class TestEmployee(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest2.main()
 
