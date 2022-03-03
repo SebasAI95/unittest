@@ -19,4 +19,4 @@ jobs:
 
         - name: Test with unittest
           run: |
-            pytest /home/runner/work/unittest/tests
+            unittest /home/runner/work/unittest/tests
