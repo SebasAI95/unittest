@@ -17,6 +17,14 @@ jobs:
             python-version: 3.9.9
             cache: 'pip'
 
+        - name: Create and start virtual environment
+          run: |
+            python -m venv venv
+            source venv/bin/activate
+
+        - name: Install unittest
+          run: pip install unittest
+
         - name: Test with unittest
           run: |
             unittest /home/runner/work/unittest/tests
