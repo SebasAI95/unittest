@@ -23,7 +23,7 @@ jobs:
             source venv/bin/activate
 
         - name: Install unittest
-          run: pip install unittest
+          run: pip install unittest2
 
         - name: Test with unittest
           run: |
