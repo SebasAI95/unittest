@@ -27,4 +27,4 @@ jobs:
 
         - name: Test with unittest
           run: |
-            unittest /home/runner/work/unittest/tests
+            unittest2 /home/runner/work/unittest/tests
