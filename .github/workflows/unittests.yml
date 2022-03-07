@@ -22,9 +22,9 @@ jobs:
             python -m venv venv
             source venv/bin/activate
 
-        - name: Install dependencies
-          run: pip install -r requirements.txt
+        - name: Install unittest
+          run: pip install unittest
 
         - name: Test with unittest
           run: |
-            unittest2 /home/runner/work/unittest/tests
+            unittest /home/runner/work/unittest/tests

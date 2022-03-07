@@ -1,7 +1,8 @@
+import requests
 
 class Employee:
 
-    raise_inc = 1.10
+    raise_inc = 1.1
 
     def __init__(self, name, last_name, pay):
         self.name = name
@@ -18,4 +19,12 @@ class Employee:
 
     @property
     def apply_raise(self):
-        return round(self.pay*self.raise_inc,1)
+        return str(round(self.pay*self.raise_inc, 1))
+
+    def monthly_schedule(self, month):
+        response = requests.get(f'http://company.com/{self.last_name}/{month}')
+        if response.ok:
+            return response.text
+        else:
+            return 'Bad response!'
+
